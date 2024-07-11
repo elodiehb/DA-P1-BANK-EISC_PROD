@@ -1250,13 +1250,13 @@ X_train.shape, X_test.shape
                C'est donc cette pipeline utilisée ci-après :  """)
    st.divider()
    # Fonction pour charger les données
-   #@st.cache_data
+   @st.cache_data
    def load_data():
     df=pd.read_csv("bank.csv")
     return df
 
    #Fonction pour prétraiter les données
-   #@st.cache_data
+   @st.cache_data
    def preprocess_data(df):
         # Conversion de 'month' en int en utilisant un mapping
         month_mapping = {'jan': 1, 'feb': 2, 'mar': 3, 'apr': 4, 'may': 5, 'jun': 6, 'jul': 7, 'aug': 8, 'sep': 9, 'oct': 10, 'nov': 11, 'dec': 12 }
@@ -1278,7 +1278,7 @@ X_train.shape, X_test.shape
         return X_train, X_test, y_train, y_test
 
    #Fonction pour prétraiter et transformer les données
-   #@st.cache_data
+   @st.cache_data
    def preprocess_and_transform(X_train, X_test, y_train, y_test):
         # Définition des features
         binary_features = ['default', 'housing', 'loan', 'pdays_contact']
@@ -1559,7 +1559,7 @@ ce qui démontre le poids de cette variable dans la modélisation prédictive.
       return 0 if x == -1 else x
 
    # Fonction de prétraitement des données
-   #@st.cache_data
+   @st.cache_data
    def preprocess_data2(df):
     # Discrétisation de la variable 'age' avec labels ordinaux
     bins = [18, 29, 40, 50, 60, 96]
@@ -1652,7 +1652,7 @@ ce qui démontre le poids de cette variable dans la modélisation prédictive.
    
 
    # Fonction pour entraîner et évaluer les modèles
-   #@st.cache_data
+   @st.cache_data
    def train_and_evaluate_models(X_train, X_test, y_train, y_test):
       params_rf = {
          'max_depth': 10,
