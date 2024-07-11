@@ -116,7 +116,7 @@ if page == pages[1] :
   st.title('Le jeu de données')
   st.markdown('Le jeu de données bank.csv est basé sur le jeu de données UCI Bank Marketing dont on peut lire la description ici : http://archive.ics.uci.edu/ml/datasets/Bank+Marketing). Créateurs: S. Moro, P. Rita, P. Cortez.')
   st.header('Les variables')
-  df2=pd.read_excel("variables.xlsx")
+  df2=pd.read_excel("https://raw.githubusercontent.com/DADSMAI2024/DA-P1-BANK-EISC_PROD/main/variables.xlsx")
   st.dataframe(df2)
   st.divider()
   st.header('Aperçu des données')
