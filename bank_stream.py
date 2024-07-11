@@ -1818,3 +1818,58 @@ ce qui démontre le poids de cette variable dans la modélisation prédictive.
        st.write(f"Erreur : Le nombre de caractéristiques ({len(feature_names)}) ne correspond pas au nombre d'importances des caractéristiques ({len(importances)}).")
    else:
       st.write(f"Le modèle {model_choice} ne supporte pas l'extraction des importances des caractéristiques.")
+
+
+
+
+if page == pages[5] : 
+    st.title("Conclusion et Perspective")
+
+    st.markdown("""
+    L’analyse des données a permis de mieux cibler les clients potentiellement souscripteurs et l'utilisation d’algorithme de Machine Learning (ML) peut offrir de nombreuses opportunités pour la banque, pour prédire notamment les dits-souscripteurs.""")
+    st.markdown("\n")
+
+    st.subheader("Algorithme de Machine Learning à privilégier lors des prochaines campagnes") 
+    st.markdown("""
+    En prenant en compte la durée de l’appel, les modèles sont très performants. 
+    Néanmoins, il est à privilégier un modèle un peu moins performant mais sans aucun doute plus prédictif du potentiel client souscripteur (sans la donnée de durée d’appel). 
+
+    Nous recommandons ainsi d’utiliser les modèles de ML optimisés, tels que **XGBoost** ou **LightGBM**, pour prédire les clients susceptibles de souscrire à ce type de produit bancaire ‘dépôt à terme’. L’un ou l’autre permettra une prédiction correcte en moyenne de 74% à 75% des clients susceptibles de souscrire au produit.""")
+
+
+    st.subheader("Recommandations pour améliorer les modèles prédictifs") 
+    st.markdown("""
+    Les modèles se nourrissant de la data, il faut noter que leurs performances seront optimisées à chaque campagne et avec l’apport de nouvelles données. 
+    - Aussi il peut être intéressant d’envisager un apport de données par des sources supplémentaires comme certaines données transactionnelles, ou les interactions sur les réseaux sociaux.
+    - Il serait également utile d’enrichir les données en recueillant et analysant les feedbacks et retours clients.  Les clients peuvent fournir des informations précieuses sur les raisons pour lesquelles ils ont souscrit ou non au produit.
+    Ces données enrichies pourraient ainsi améliorer l’entrainement des modèles prédictifs.""")
+    st.markdown("\n")
+
+    st.subheader("Profil client à cibler en priorité") 
+    image_PersonaCible = "https://raw.githubusercontent.com/DADSMAI2024/DA-P1-BANK-EISC/main/img/Persona Cible.png"
+    st.markdown(
+        f"""
+        <style>
+        .center {{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }}
+        </style>
+        <img src="{image_PersonaCible}" class="center">
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown("\n")
+    st.subheader("Stratégie et optimisation continue") 
+    st.markdown("""
+    Nous recommandons donc l’utilisation d’un modèle prédictif de type **LightGBM** ou **XGBoost** selon les contraintes d’infrastructure et de données pour la prochaine campagne. 
+    Il permettra de cibler une bonne part de clients susceptibles de souscrire. 
+    Les résultats de la prochaine campagne permettront alors d’alimenter le système prédictif mis en place et de l’optimiser dans un processus continu. 
+
+    Coupler à une bonne sensibilisation des agents marketing à la cible client et à l’amélioration du démarchage telle que recommandé, la prochaine campagne devrait connaître de meilleurs résultats. 
+
+    L’analyse des prochains résultats à chaque campagne permettra un processus d’amélioration continue pour toujours mieux cibler les clients, augmenter le taux de souscription au dépôt à terme et assurer une meilleure efficacité des futures campagnes.""")
+    st.markdown("\n")
+
+
