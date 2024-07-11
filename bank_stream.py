@@ -1851,6 +1851,7 @@ if page == pages[5] :
 
     st.subheader("Profil client à cibler en priorité") 
     image_PersonaCible = "https://raw.githubusercontent.com/DADSMAI2024/DA-P1-BANK-EISC/main/img/Persona Cible.png"
+    st.image(image_PersonaCible)
     #st.markdown(
     #    f"""
     #    <style>
