@@ -254,7 +254,11 @@ if page == pages[2] :
   button3 = col3.button("Variables Catégorielles")
   button4 = col4.button("Variables versus Cible")
 
-  if button1:
+  # Vérifiez si un bouton est cliqué
+  button_clicked = button1 or button2 or button3 or button4
+
+  #Définir button1 par défaut à l'ouverture de la page
+  if not button_clicked or button1:
         
         # Code pour afficher le graphique avec Plotly
         count_deposit = df['deposit'].value_counts()
